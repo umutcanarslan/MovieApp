@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		800C21862917E68000A1ADE7 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800C21852917E68000A1ADE7 /* UIViewController+Alert.swift */; };
+		800C21882917F15100A1ADE7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 800C21872917F15100A1ADE7 /* GoogleService-Info.plist */; };
+		800C218A2917F16A00A1ADE7 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800C21892917F16A00A1ADE7 /* FirebaseManager.swift */; };
 		80C41E2D29104D2600186312 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C41E2C29104D2600186312 /* AppDelegate.swift */; };
 		80C41E3629104D2800186312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80C41E3529104D2800186312 /* Assets.xcassets */; };
 		80DF2CB029105534008B146E /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DF2CAE29105534008B146E /* SplashViewController.swift */; };
@@ -18,6 +21,9 @@
 /* Begin PBXFileReference section */
 		541ECA0537A473736D11EE00 /* Pods-MovieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.debug.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.debug.xcconfig"; sourceTree = "<group>"; };
 		70D0AC2FFAA1CA9B7C8F741C /* Pods_MovieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		800C21852917E68000A1ADE7 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		800C21872917F15100A1ADE7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		800C21892917F16A00A1ADE7 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		80C41E2929104D2600186312 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80C41E2C29104D2600186312 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80C41E3529104D2800186312 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,6 +46,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		800C21832917E64D00A1ADE7 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				800C21842917E65400A1ADE7 /* Extensions */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		800C21842917E65400A1ADE7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				800C21852917E68000A1ADE7 /* UIViewController+Alert.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		80C41E2029104D2600186312 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +83,7 @@
 		80C41E2B29104D2600186312 /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				800C21832917E64D00A1ADE7 /* Utility */,
 				80C41E4829104EB600186312 /* Network */,
 				80C41E4729104E7300186312 /* CustomViews */,
 				80C41E4629104DFA00186312 /* App */,
@@ -75,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				80DF2CB22910566C008B146E /* NetworkConnectionManager.swift */,
+				800C21892917F16A00A1ADE7 /* FirebaseManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -117,6 +141,7 @@
 			children = (
 				80C41E3529104D2800186312 /* Assets.xcassets */,
 				80C41E3A29104D2800186312 /* Info.plist */,
+				800C21872917F15100A1ADE7 /* GoogleService-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -238,6 +263,7 @@
 			files = (
 				80C41E3629104D2800186312 /* Assets.xcassets in Resources */,
 				80DF2CB129105534008B146E /* SplashViewController.xib in Resources */,
+				800C21882917F15100A1ADE7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +316,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				800C21862917E68000A1ADE7 /* UIViewController+Alert.swift in Sources */,
 				80DF2CB32910566C008B146E /* NetworkConnectionManager.swift in Sources */,
+				800C218A2917F16A00A1ADE7 /* FirebaseManager.swift in Sources */,
 				80C41E2D29104D2600186312 /* AppDelegate.swift in Sources */,
 				80DF2CB029105534008B146E /* SplashViewController.swift in Sources */,
 			);
@@ -421,12 +449,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8TW55T2GZ2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MovieApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -438,6 +468,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.umutcanarslan.MovieApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -450,12 +481,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8TW55T2GZ2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MovieApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -467,6 +500,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.umutcanarslan.MovieApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
