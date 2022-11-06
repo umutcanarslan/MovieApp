@@ -9,6 +9,8 @@ import UIKit
 
 class SplashViewController: UIViewController {
 
+    @IBOutlet weak var splashTitle: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         checkInternetConnection()
@@ -26,7 +28,13 @@ class SplashViewController: UIViewController {
     }
 
     private func setText() {
-        // TODO: remote config ile gelen text'i ekrana yazdır
+        FirebaseManager.RemoteConfiguration.setSplashTitle { title in
+            if let title = title {
+                self.splashTitle.text = title
+            } else {
+                self.showAlertForBadNetwork()
+            }
+        }
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.presentMovieListScreen()

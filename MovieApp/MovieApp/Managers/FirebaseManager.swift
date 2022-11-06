@@ -6,17 +6,43 @@
 //
 
 import Firebase
+import FirebaseCore
 import FirebaseRemoteConfig
 
-struct FirebaseManager {
+enum RemoteConfigKeys {
+    static let splashTitle = "set_splash_title"
+}
 
-    struct RemoteConfig {
+class FirebaseManager {
 
-    }
+    private init() {}
 
     static func configurationFirebase() {
         FirebaseApp.configure()
     }
 
-}
+    struct RemoteConfiguration {
 
+        static let config = RemoteConfig.remoteConfig()
+
+        static func configureRemoteConfig() {
+            let settings = RemoteConfigSettings()
+            settings.minimumFetchInterval = 0
+            FirebaseManager.RemoteConfiguration.config.configSettings = settings
+        }
+
+        static func setSplashTitle(completion: @escaping (String?) -> Void) {
+            config.fetchAndActivate { status, error in
+                switch status {
+                case .successFetchedFromRemote:
+                    let splashTitle = config.configValue(forKey: RemoteConfigKeys.splashTitle).stringValue
+                    completion(splashTitle)
+                default:
+                    break
+                }
+            }
+        }
+
+    }
+
+}
