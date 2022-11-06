@@ -22,7 +22,6 @@ enum AppScreens {
             return MovieListViewController()
         }
     }
-
 }
 
 class AppRouterManager {

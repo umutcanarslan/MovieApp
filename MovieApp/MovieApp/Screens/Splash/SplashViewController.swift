@@ -54,7 +54,7 @@ class SplashViewController: UIViewController {
     }
 
     private func presentMovieListScreen() {
-        // TODO: router yapısı oluştur ve present işini orada yap
+        AppRouterManager.shared.goToScreen(screen: .movieList)
     }
 
 }
