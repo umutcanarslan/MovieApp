@@ -13,6 +13,9 @@
 		800C218E2918069F00A1ADE7 /* AppRouterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800C218D2918069F00A1ADE7 /* AppRouterManager.swift */; };
 		800C2191291806C400A1ADE7 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800C218F291806C400A1ADE7 /* MovieListViewController.swift */; };
 		800C2192291806C400A1ADE7 /* MovieListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 800C2190291806C400A1ADE7 /* MovieListViewController.xib */; };
+		800C219529183E3600A1ADE7 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800C219429183E3600A1ADE7 /* Movies.swift */; };
+		800C219729183F9900A1ADE7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800C219629183F9900A1ADE7 /* NetworkManager.swift */; };
+		800C2199291842B000A1ADE7 /* SearchMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800C2198291842B000A1ADE7 /* SearchMovie.swift */; };
 		80C41E2D29104D2600186312 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C41E2C29104D2600186312 /* AppDelegate.swift */; };
 		80C41E3629104D2800186312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80C41E3529104D2800186312 /* Assets.xcassets */; };
 		80DF2CB029105534008B146E /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DF2CAE29105534008B146E /* SplashViewController.swift */; };
@@ -30,6 +33,9 @@
 		800C218D2918069F00A1ADE7 /* AppRouterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterManager.swift; sourceTree = "<group>"; };
 		800C218F291806C400A1ADE7 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		800C2190291806C400A1ADE7 /* MovieListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListViewController.xib; sourceTree = "<group>"; };
+		800C219429183E3600A1ADE7 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
+		800C219629183F9900A1ADE7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		800C2198291842B000A1ADE7 /* SearchMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovie.swift; sourceTree = "<group>"; };
 		80C41E2929104D2600186312 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80C41E2C29104D2600186312 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80C41E3529104D2800186312 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,12 +58,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		800C21832917E64D00A1ADE7 /* Utility */ = {
+		800C21832917E64D00A1ADE7 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				800C21842917E65400A1ADE7 /* Extensions */,
 			);
-			path = Utility;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		800C21842917E65400A1ADE7 /* Extensions */ = {
@@ -66,6 +72,15 @@
 				800C21852917E68000A1ADE7 /* UIViewController+Alert.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		800C219329183E3100A1ADE7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				800C219429183E3600A1ADE7 /* Movies.swift */,
+				800C2198291842B000A1ADE7 /* SearchMovie.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		80C41E2029104D2600186312 = {
@@ -89,8 +104,8 @@
 		80C41E2B29104D2600186312 /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
-				800C21832917E64D00A1ADE7 /* Utility */,
-				80C41E4829104EB600186312 /* Network */,
+				800C219329183E3100A1ADE7 /* Model */,
+				800C21832917E64D00A1ADE7 /* Utilities */,
 				80C41E4729104E7300186312 /* CustomViews */,
 				80C41E4629104DFA00186312 /* App */,
 				80C41E4529104DD900186312 /* Resources */,
@@ -103,9 +118,10 @@
 		80C41E4029104D8B00186312 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				80DF2CB22910566C008B146E /* NetworkConnectionManager.swift */,
-				800C21892917F16A00A1ADE7 /* FirebaseManager.swift */,
 				800C218D2918069F00A1ADE7 /* AppRouterManager.swift */,
+				800C21892917F16A00A1ADE7 /* FirebaseManager.swift */,
+				80DF2CB22910566C008B146E /* NetworkConnectionManager.swift */,
+				800C219629183F9900A1ADE7 /* NetworkManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -168,29 +184,6 @@
 			children = (
 			);
 			path = CustomViews;
-			sourceTree = "<group>";
-		};
-		80C41E4829104EB600186312 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				80C41E4929104EC100186312 /* Request */,
-				80C41E4A29104EC600186312 /* Reponse */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		80C41E4929104EC100186312 /* Request */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Request;
-			sourceTree = "<group>";
-		};
-		80C41E4A29104EC600186312 /* Reponse */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Reponse;
 			sourceTree = "<group>";
 		};
 		AB5FBC57D44D6FEE86449A5F /* Frameworks */ = {
@@ -326,12 +319,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				800C219729183F9900A1ADE7 /* NetworkManager.swift in Sources */,
 				800C21862917E68000A1ADE7 /* UIViewController+Alert.swift in Sources */,
+				800C2199291842B000A1ADE7 /* SearchMovie.swift in Sources */,
 				80DF2CB32910566C008B146E /* NetworkConnectionManager.swift in Sources */,
 				800C218A2917F16A00A1ADE7 /* FirebaseManager.swift in Sources */,
 				80C41E2D29104D2600186312 /* AppDelegate.swift in Sources */,
 				800C2191291806C400A1ADE7 /* MovieListViewController.swift in Sources */,
 				800C218E2918069F00A1ADE7 /* AppRouterManager.swift in Sources */,
+				800C219529183E3600A1ADE7 /* Movies.swift in Sources */,
 				80DF2CB029105534008B146E /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
