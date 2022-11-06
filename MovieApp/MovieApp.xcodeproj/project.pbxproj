@@ -10,6 +10,9 @@
 		800C21862917E68000A1ADE7 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800C21852917E68000A1ADE7 /* UIViewController+Alert.swift */; };
 		800C21882917F15100A1ADE7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 800C21872917F15100A1ADE7 /* GoogleService-Info.plist */; };
 		800C218A2917F16A00A1ADE7 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800C21892917F16A00A1ADE7 /* FirebaseManager.swift */; };
+		800C218E2918069F00A1ADE7 /* AppRouterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800C218D2918069F00A1ADE7 /* AppRouterManager.swift */; };
+		800C2191291806C400A1ADE7 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800C218F291806C400A1ADE7 /* MovieListViewController.swift */; };
+		800C2192291806C400A1ADE7 /* MovieListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 800C2190291806C400A1ADE7 /* MovieListViewController.xib */; };
 		80C41E2D29104D2600186312 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C41E2C29104D2600186312 /* AppDelegate.swift */; };
 		80C41E3629104D2800186312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80C41E3529104D2800186312 /* Assets.xcassets */; };
 		80DF2CB029105534008B146E /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DF2CAE29105534008B146E /* SplashViewController.swift */; };
@@ -24,6 +27,9 @@
 		800C21852917E68000A1ADE7 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		800C21872917F15100A1ADE7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		800C21892917F16A00A1ADE7 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		800C218D2918069F00A1ADE7 /* AppRouterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterManager.swift; sourceTree = "<group>"; };
+		800C218F291806C400A1ADE7 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
+		800C2190291806C400A1ADE7 /* MovieListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListViewController.xib; sourceTree = "<group>"; };
 		80C41E2929104D2600186312 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80C41E2C29104D2600186312 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80C41E3529104D2800186312 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +105,7 @@
 			children = (
 				80DF2CB22910566C008B146E /* NetworkConnectionManager.swift */,
 				800C21892917F16A00A1ADE7 /* FirebaseManager.swift */,
+				800C218D2918069F00A1ADE7 /* AppRouterManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -125,6 +132,8 @@
 		80C41E4329104DBB00186312 /* MovieList */ = {
 			isa = PBXGroup;
 			children = (
+				800C218F291806C400A1ADE7 /* MovieListViewController.swift */,
+				800C2190291806C400A1ADE7 /* MovieListViewController.xib */,
 			);
 			path = MovieList;
 			sourceTree = "<group>";
@@ -264,6 +273,7 @@
 				80C41E3629104D2800186312 /* Assets.xcassets in Resources */,
 				80DF2CB129105534008B146E /* SplashViewController.xib in Resources */,
 				800C21882917F15100A1ADE7 /* GoogleService-Info.plist in Resources */,
+				800C2192291806C400A1ADE7 /* MovieListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +330,8 @@
 				80DF2CB32910566C008B146E /* NetworkConnectionManager.swift in Sources */,
 				800C218A2917F16A00A1ADE7 /* FirebaseManager.swift in Sources */,
 				80C41E2D29104D2600186312 /* AppDelegate.swift in Sources */,
+				800C2191291806C400A1ADE7 /* MovieListViewController.swift in Sources */,
+				800C218E2918069F00A1ADE7 /* AppRouterManager.swift in Sources */,
 				80DF2CB029105534008B146E /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,7 +390,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -433,7 +445,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
