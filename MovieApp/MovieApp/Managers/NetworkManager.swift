@@ -20,7 +20,7 @@ class NetworkManager {
     private let apiKey = "89d41dac"
     lazy var baseURL = "http://www.omdbapi.com/?apikey=\(apiKey)"
 
-    func getMovies(with word: String, completed: @escaping (Result<[SearchMovie], NetworkError>) -> Void) {
+    func getMovies(with word: String, completed: @escaping (Result<[Movies], NetworkError>) -> Void) {
         let endpoint = baseURL + "&s=\(word)"
 
         guard let url = URL(string: endpoint) else {
@@ -45,9 +45,8 @@ class NetworkManager {
             }
             do {
                 let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let followers = try decoder.decode([SearchMovie].self, from: data)
-                completed(.success(followers))
+                let response = try decoder.decode(SearchMovie.self, from: data)
+                completed(.success(response.search ?? []))
             } catch {
                 completed(.failure(.invalidData))
                 return
