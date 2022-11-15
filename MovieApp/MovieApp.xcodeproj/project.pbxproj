@@ -21,7 +21,7 @@
 		80DF2CB32910566C008B146E /* NetworkConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DF2CB22910566C008B146E /* NetworkConnectionManager.swift */; };
 		80E07E882923CD560028AE98 /* MovieListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E07E862923CD550028AE98 /* MovieListTableViewCell.swift */; };
 		80E07E892923CD560028AE98 /* MovieListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80E07E872923CD560028AE98 /* MovieListTableViewCell.xib */; };
-		80E07E8B2923D0500028AE98 /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E07E8A2923D0500028AE98 /* KingfisherManager.swift */; };
+		80E07E8B2923D0500028AE98 /* KingfisherHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E07E8A2923D0500028AE98 /* KingfisherHelper.swift */; };
 		80E07E8D2923D2F50028AE98 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E07E8C2923D2F50028AE98 /* NetworkManager.swift */; };
 		D9C2C89B7D940AB8952F3BD2 /* Pods_MovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70D0AC2FFAA1CA9B7C8F741C /* Pods_MovieApp.framework */; };
 /* End PBXBuildFile section */
@@ -45,7 +45,7 @@
 		80DF2CB22910566C008B146E /* NetworkConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnectionManager.swift; sourceTree = "<group>"; };
 		80E07E862923CD550028AE98 /* MovieListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewCell.swift; sourceTree = "<group>"; };
 		80E07E872923CD560028AE98 /* MovieListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListTableViewCell.xib; sourceTree = "<group>"; };
-		80E07E8A2923D0500028AE98 /* KingfisherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherManager.swift; sourceTree = "<group>"; };
+		80E07E8A2923D0500028AE98 /* KingfisherHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherHelper.swift; sourceTree = "<group>"; };
 		80E07E8C2923D2F50028AE98 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		ACE24EEDB380751EF3B97030 /* Pods-MovieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.release.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,7 +125,7 @@
 				800C218D2918069F00A1ADE7 /* AppRouterManager.swift */,
 				800C21892917F16A00A1ADE7 /* FirebaseManager.swift */,
 				80DF2CB22910566C008B146E /* NetworkConnectionManager.swift */,
-				80E07E8A2923D0500028AE98 /* KingfisherManager.swift */,
+				80E07E8A2923D0500028AE98 /* KingfisherHelper.swift */,
 				80E07E8C2923D2F50028AE98 /* NetworkManager.swift */,
 			);
 			path = Managers;
@@ -340,7 +340,7 @@
 				800C218A2917F16A00A1ADE7 /* FirebaseManager.swift in Sources */,
 				80C41E2D29104D2600186312 /* AppDelegate.swift in Sources */,
 				800C2191291806C400A1ADE7 /* MovieListViewController.swift in Sources */,
-				80E07E8B2923D0500028AE98 /* KingfisherManager.swift in Sources */,
+				80E07E8B2923D0500028AE98 /* KingfisherHelper.swift in Sources */,
 				80E07E882923CD560028AE98 /* MovieListTableViewCell.swift in Sources */,
 				800C218E2918069F00A1ADE7 /* AppRouterManager.swift in Sources */,
 				800C219529183E3600A1ADE7 /* Movies.swift in Sources */,

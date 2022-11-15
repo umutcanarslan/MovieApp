@@ -9,13 +9,17 @@ import UIKit
 
 final class MovieListTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var movieAverage: UILabel!
     @IBOutlet weak var movieTitle: UILabel!
-    @IBOutlet weak var movieOverview: UILabel!
+    @IBOutlet weak var movieYear: UILabel!
     @IBOutlet weak var movieImage: UIImageView!
 
-    func configureMovieCell() {
-        // TODO: add configure code for movie cell information
+    func setupCell(with movie: Movies) {
+        movieTitle.text = movie.title
+        movieYear.text = movie.year
+
+        KingfisherHelper.getMovieImage(with: .cell, urlString: movie.poster) { [weak self] image in
+            self?.movieImage.image = image
+        }
     }
     
 }
