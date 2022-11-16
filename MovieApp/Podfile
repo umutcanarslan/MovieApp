@@ -9,6 +9,7 @@ target 'MovieApp' do
 
   pod 'Firebase/Core'
   pod 'Firebase/RemoteConfig'
+  pod 'Firebase/Messaging'
   pod 'Alamofire'
   pod 'Kingfisher'
 
