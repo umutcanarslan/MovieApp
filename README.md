@@ -5,7 +5,7 @@
 Movie App / http://omdbapi.com
 
 ### Screenshots:
-<img src="./Images/firebaseEvent.png" width="288" height="288"><br>
+<img src="./Images/firebaseEvent.png" width="940" height="516"><br>
 
 ### Used 
 - Firebase Remote Config
