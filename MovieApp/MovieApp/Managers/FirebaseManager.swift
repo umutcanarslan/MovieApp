@@ -21,6 +21,14 @@ class FirebaseManager {
         FirebaseApp.configure()
     }
 
+    struct AnalyticsLog {
+
+        static func sendEvent(eventName: String, parameters: [String: Any]? = nil) {
+            Analytics.logEvent(eventName, parameters: parameters)
+        }
+
+    }
+
     struct RemoteConfiguration {
 
         static let config = RemoteConfig.remoteConfig()

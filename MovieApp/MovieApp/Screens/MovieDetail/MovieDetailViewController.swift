@@ -39,6 +39,15 @@ class MovieDetailViewController: UIViewController {
         view.backgroundColor = .systemBackground
     }
 
+    func sendEvent(movieInfo: Movie) {
+        FirebaseManager.AnalyticsLog.sendEvent(eventName: "movie_Detail", parameters: [
+            "movieTitle" : movieInfo.title ?? "Unkown",
+            "movieYear" : movieInfo.year ?? "Unkown",
+            "movieRating" : movieInfo.imdbRating ?? "Unkown",
+            "movieVoteCount" : movieInfo.imdbVotes ?? "Unkown"
+        ])
+    }
+
     func viewModelObserve(change: MovieDetailViewModelState.MovieDetailStateChange) {
         viewModel.detailState = { [weak self] state in
             switch state {
@@ -48,9 +57,11 @@ class MovieDetailViewController: UIViewController {
                 break
             case .success(let movie):
                 guard let movie = movie else {
-                    // TODO: show Alet
+                    self?.dismiss(animated: true)
                     return
                 }
+
+                self?.sendEvent(movieInfo: movie)
                 self?.setupDetail(movieDetail: movie)
             case .error:
                 break
@@ -60,7 +71,6 @@ class MovieDetailViewController: UIViewController {
     }
 
     func setupDetail(movieDetail: Movie) {
-
         movieTitle.text = movieDetail.title
         movieOverview.text = movieDetail.overview
         movieRating.text = movieDetail.imdbRating
