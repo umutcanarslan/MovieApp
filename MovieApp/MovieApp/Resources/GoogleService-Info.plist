@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>288178997144-pl05nen2g95csgfcjr4gu8l6vatl6opn.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.288178997144-pl05nen2g95csgfcjr4gu8l6vatl6opn</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCY3UerJ5hKW-k16Z-a2Rkq9EQIiu3iD4Y</string>
+	<key>GCM_SENDER_ID</key>
+	<string>288178997144</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.umutcanarslan.MovieApp</string>
+	<key>PROJECT_ID</key>
+	<string>loodosmovie-ios</string>
+	<key>STORAGE_BUCKET</key>
+	<string>loodosmovie-ios.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<true/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:288178997144:ios:acee3447bd1eb145ffcded</string>
+</dict>
+</plist>
