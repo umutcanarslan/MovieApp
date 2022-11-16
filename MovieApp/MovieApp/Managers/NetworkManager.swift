@@ -57,7 +57,7 @@ class NetworkManager {
     }
 
     func getMovieDetail(with id: String, completed: @escaping (Result<Movie, NetworkError>) -> Void) {
-        let endpoint = baseURL + "&t=\(id)"
+        let endpoint = baseURL + "&i=\(id)"
 
         guard let url = URL(string: endpoint) else {
             completed(.failure(.invalidSearchedWord))
