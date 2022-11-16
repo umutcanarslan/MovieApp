@@ -36,5 +36,5 @@ class AppRouterManager {
         window.makeKeyAndVisible()
         UIView.transition(with: window, duration: 0.4, options: .transitionCrossDissolve, animations: nil, completion: nil)
     }
-
+    
 }

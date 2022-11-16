@@ -12,6 +12,7 @@ enum NetworkError: String, Error {
     case invalidSearchedWord = "This word created an invalid request. Please try again."
     case invalidResponse = "Invalid response from the server. Please try again."
     case invalidData = "The data received from the server was invalid . Please try again."
+    case emptyData = "No movies found"
 }
 
 class NetworkManager {
@@ -20,7 +21,7 @@ class NetworkManager {
     private let apiKey = "89d41dac"
     lazy var baseURL = "http://www.omdbapi.com/?apikey=\(apiKey)"
 
-    func getMovies(with word: String, completed: @escaping (Result<[Movies], NetworkError>) -> Void) {
+    func getMovies(with word: String, completed: @escaping (Result<[Movie], NetworkError>) -> Void) {
         let endpoint = baseURL + "&s=\(word)"
 
         guard let url = URL(string: endpoint) else {
@@ -55,7 +56,7 @@ class NetworkManager {
         task.resume()
     }
 
-    func getMovieDetail(with id: String, completed: @escaping (Result<[SearchMovie], NetworkError>) -> Void) {
+    func getMovieDetail(with id: String, completed: @escaping (Result<Movie, NetworkError>) -> Void) {
         let endpoint = baseURL + "&t=\(id)"
 
         guard let url = URL(string: endpoint) else {
@@ -80,9 +81,8 @@ class NetworkManager {
             }
             do {
                 let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let followers = try decoder.decode([SearchMovie].self, from: data)
-                completed(.success(followers))
+                let movie = try decoder.decode(Movie.self, from: data)
+                completed(.success(movie))
             } catch {
                 completed(.failure(.invalidData))
                 return

@@ -13,7 +13,7 @@ final class MovieListTableViewCell: UITableViewCell {
     @IBOutlet weak var movieYear: UILabel!
     @IBOutlet weak var movieImage: UIImageView!
 
-    func setupCell(with movie: Movies) {
+    func setupCell(with movie: Movie) {
         movieTitle.text = movie.title
         movieYear.text = movie.year
 

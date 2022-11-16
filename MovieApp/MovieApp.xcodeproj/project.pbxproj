@@ -12,7 +12,7 @@
 		800C218A2917F16A00A1ADE7 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800C21892917F16A00A1ADE7 /* FirebaseManager.swift */; };
 		800C218E2918069F00A1ADE7 /* AppRouterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800C218D2918069F00A1ADE7 /* AppRouterManager.swift */; };
 		800C2191291806C400A1ADE7 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800C218F291806C400A1ADE7 /* MovieListViewController.swift */; };
-		800C219529183E3600A1ADE7 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800C219429183E3600A1ADE7 /* Movies.swift */; };
+		800C219529183E3600A1ADE7 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800C219429183E3600A1ADE7 /* Movie.swift */; };
 		800C2199291842B000A1ADE7 /* SearchMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800C2198291842B000A1ADE7 /* SearchMovie.swift */; };
 		80C41E2D29104D2600186312 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C41E2C29104D2600186312 /* AppDelegate.swift */; };
 		80C41E3629104D2800186312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80C41E3529104D2800186312 /* Assets.xcassets */; };
@@ -23,6 +23,8 @@
 		80E07E892923CD560028AE98 /* MovieListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80E07E872923CD560028AE98 /* MovieListTableViewCell.xib */; };
 		80E07E8B2923D0500028AE98 /* KingfisherHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E07E8A2923D0500028AE98 /* KingfisherHelper.swift */; };
 		80E07E8D2923D2F50028AE98 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E07E8C2923D2F50028AE98 /* NetworkManager.swift */; };
+		80E07E912923E5DD0028AE98 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E07E902923E5DD0028AE98 /* MovieListViewModel.swift */; };
+		80E07E932923E93A0028AE98 /* UITableViewCell+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E07E922923E93A0028AE98 /* UITableViewCell+Ext.swift */; };
 		D9C2C89B7D940AB8952F3BD2 /* Pods_MovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70D0AC2FFAA1CA9B7C8F741C /* Pods_MovieApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +36,7 @@
 		800C21892917F16A00A1ADE7 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		800C218D2918069F00A1ADE7 /* AppRouterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterManager.swift; sourceTree = "<group>"; };
 		800C218F291806C400A1ADE7 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
-		800C219429183E3600A1ADE7 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
+		800C219429183E3600A1ADE7 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		800C2198291842B000A1ADE7 /* SearchMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovie.swift; sourceTree = "<group>"; };
 		80C41E2929104D2600186312 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80C41E2C29104D2600186312 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		80E07E872923CD560028AE98 /* MovieListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListTableViewCell.xib; sourceTree = "<group>"; };
 		80E07E8A2923D0500028AE98 /* KingfisherHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherHelper.swift; sourceTree = "<group>"; };
 		80E07E8C2923D2F50028AE98 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		80E07E902923E5DD0028AE98 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
+		80E07E922923E93A0028AE98 /* UITableViewCell+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Ext.swift"; sourceTree = "<group>"; };
 		ACE24EEDB380751EF3B97030 /* Pods-MovieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.release.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				800C21852917E68000A1ADE7 /* UIViewController+Alert.swift */,
+				80E07E922923E93A0028AE98 /* UITableViewCell+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -81,7 +86,7 @@
 		800C219329183E3100A1ADE7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				800C219429183E3600A1ADE7 /* Movies.swift */,
+				800C219429183E3600A1ADE7 /* Movie.swift */,
 				800C2198291842B000A1ADE7 /* SearchMovie.swift */,
 			);
 			path = Model;
@@ -154,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				800C218F291806C400A1ADE7 /* MovieListViewController.swift */,
+				80E07E902923E5DD0028AE98 /* MovieListViewModel.swift */,
 			);
 			path = MovieList;
 			sourceTree = "<group>";
@@ -338,12 +344,14 @@
 				800C2199291842B000A1ADE7 /* SearchMovie.swift in Sources */,
 				80DF2CB32910566C008B146E /* NetworkConnectionManager.swift in Sources */,
 				800C218A2917F16A00A1ADE7 /* FirebaseManager.swift in Sources */,
+				80E07E912923E5DD0028AE98 /* MovieListViewModel.swift in Sources */,
 				80C41E2D29104D2600186312 /* AppDelegate.swift in Sources */,
+				80E07E932923E93A0028AE98 /* UITableViewCell+Ext.swift in Sources */,
 				800C2191291806C400A1ADE7 /* MovieListViewController.swift in Sources */,
 				80E07E8B2923D0500028AE98 /* KingfisherHelper.swift in Sources */,
 				80E07E882923CD560028AE98 /* MovieListTableViewCell.swift in Sources */,
 				800C218E2918069F00A1ADE7 /* AppRouterManager.swift in Sources */,
-				800C219529183E3600A1ADE7 /* Movies.swift in Sources */,
+				800C219529183E3600A1ADE7 /* Movie.swift in Sources */,
 				80DF2CB029105534008B146E /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
